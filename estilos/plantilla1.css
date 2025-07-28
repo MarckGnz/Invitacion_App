@@ -1,0 +1,328 @@
+/* ------------------------------------
+🌐 CONFIGURACIÓN GLOBAL
+------------------------------------ */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: url('/img/fondo-completo2.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #333;
+  text-align: center;
+}
+
+/* 📦 Contenedor central */
+.contenedor {
+  max-width: 800px;
+  margin: 0 auto;
+  background: rgba(255, 220, 220, 0.9); /* Blanco con transparencia */
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+}
+
+/* ------------------------------------
+🔠 TIPOGRAFÍA
+------------------------------------ */
+h1, h2, h3 {
+  font-family: 'Dancing Script', cursive;
+  font-weight: 700;
+  font-size: 40px;
+  color: #d64161;
+  text-align: center;
+  margin: 20px;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+section p {
+  font-weight: 300;
+  line-height: 1.6;
+  text-align: center;
+}
+
+p{
+  font-size: 15px;
+}
+
+/* ------------------------------------
+🎵 AUDIO
+------------------------------------ */
+audio {
+  margin-top: 20px;
+}
+
+/* ------------------------------------
+📆 CUENTA REGRESIVA
+------------------------------------ */
+.countdown-section {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+#countdown-container {
+  display: inline-block;
+  padding: 30px;
+  background: linear-gradient(145deg, #fce4ec, #f8bbd0);
+  border: 5px double #e91e63;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  width: 60%;
+  margin-top: 20px;
+}
+
+#countdown {
+  font-size: 2.5rem;
+  color: #880e4f;
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* ------------------------------------
+📍 UBICACIÓN - MAPA
+------------------------------------ */
+.ubicacion {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.mapa-decorado {
+  border: 5px solid #ff69b4;
+  padding: 10px;
+  border-radius: 20px;
+  background: #fefefe;
+  display: block;
+  max-width: 90%;
+  margin: 0 auto 20px auto;
+}
+
+.mapa-decorado iframe {
+  width: 100%;
+  height: 300px;
+  border: none;
+  border-radius: 15px;
+}
+
+
+/* ------------------------------------
+🎁 BOTÓN GENÉRICO
+------------------------------------ */
+.boton {
+  display: inline-block;
+  padding: 12px 24px;
+  margin-top: 20px;
+  background-color: #ff69b4;
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: background 0.3s;
+}
+
+.boton:hover {
+  background-color: #ff85c1;
+}
+
+.boton i {
+  margin-right: 8px;
+  color: #fff;
+}
+
+/* ------------------------------------
+🧨 EFECTO CONFETI
+------------------------------------ */
+.confeti {
+  position: fixed;
+  top: -10px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  animation: caer linear forwards;
+  z-index: 999;
+}
+
+@keyframes caer {
+  to {
+    transform: translateY(100vh) rotate(720deg);
+    opacity: 0;
+  }
+}
+
+/* ------------------------------------
+🎶🍽️ SUGERENCIAS
+------------------------------------ */
+.sugerencias {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.sugerencias .col {
+  flex: 1;
+  min-width: 200px;
+}
+
+/* ------------------------------------
+👗 DRESS CODE - CARRUSEL
+------------------------------------ */
+.dresscode-section {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.carousel-container {
+  position: relative;
+  width: 90%;
+  max-width: 500px;
+  margin: 30px auto;
+  overflow: hidden;
+  border: 4px solid #e91e63;
+  border-radius: 15px;
+  background: #fff0f6;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel img {
+  min-width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  background: rgba(255, 255, 255, 0.7);
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  color: #880e4f;
+  border-radius: 50%;
+}
+
+.carousel-btn:hover {
+  background: #f8bbd0;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+/* ------------------------------------
+🎉 PORTADA
+------------------------------------ */
+.portada {
+  background: url('img/fondo.jpg') no-repeat center center/cover;
+  color: #333;
+  padding: 100px 20px;
+}
+
+/* ------------------------------------
+📱 RESPONSIVE DESIGN
+------------------------------------ */
+@media (max-width: 768px) {
+  .contenedor {
+    margin: 20px;
+    padding: 20px;
+  }
+
+  .portada {
+    padding: 60px 20px;
+    font-size: 90%;
+  }
+
+  .sugerencias {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sugerencias .col,
+  .mapa-decorado {
+    width: 90%;
+  }
+
+  .countdown-section #countdown {
+    font-size: 1.5em;
+  }
+
+  audio {
+    width: 90%;
+  }
+
+  #darkToggle {
+    bottom: 10px;
+    right: 10px;
+    padding: 10px 12px;
+    font-size: 16px;
+  }
+}
+.footer {
+  background-color: rgba(255, 192, 203, 0.3); /* rosa suave transparente */
+  padding: 30px 10px;
+  text-align: center;
+  font-family: 'Segoe Script', cursive;
+  color: #c22c7d;
+  border-top: 2px dashed #ff69b4;
+  margin-top: 40px;
+}
+
+.footer p {
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+.social-icons {
+  margin: 10px 0;
+}
+
+.social-icons a {
+  color: #c22c7d;
+  font-size: 28px;
+  margin: 0 15px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #ff1493;
+  transform: scale(1.2);
+}
+
+@media (max-width: 600px) {
+  .footer p {
+    font-size: 16px;
+  }
+
+  .social-icons a {
+    font-size: 24px;
+    margin: 0 10px;
+  }
+}
+
+#playPauseBtn {
+  background-color: #ff6da0; /* rosa claro */
+  border: none;
+  color: #fff;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px #f7a3c4;
+  cursor: pointer;
+  transition: 0.3s ease;
+  width: 200px;
+  height: 50px;
+}
+#playPauseBtn:hover {
+  background-color: #f8a4c0;
+}

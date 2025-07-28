@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ThabbasApp</title>
+  <link rel="icon" type="image/png" href="/img/favicon.ico">
+
+  <!-- Fuentes y estilos -->
+  <link id="theme-style" rel="stylesheet" href="" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="contenedor">
+
+    <!-- 🌸 1. Portada con fondo, título y subtítulo -->
+    <section class="portada">
+      <h1 id="Florencia">Florencia</h1>
+      <h1 id="evento">Mis XV</h1>
+      <p id="mensaje">¡Este año quiero celebrar mi cumpleaños rodeado de la gente que más quiero, y vos sos parte de eso.
+Te espero para compartir un lindo momento, buena charla y algo rico!</p>
+    </section>
+
+    <!-- 🎵 2. Reproductor de música -->
+    <section class="musica">
+      <audio  id="audio" autoplay loop>
+        <source src="sound/TRAVIS THOMPSON - NEED YOU - Kinda Neat.mp3" type="audio/mpeg" />
+      </audio>
+      <button id="playPauseBtn">🎵 Música</button>
+    </section>
+
+    <!-- ⏳ 3. Cuenta regresiva -->
+    <section class="countdown-section">
+      <h2>¡Falta muy poco!</h2>
+      <div id="countdown-container">
+        <div id="countdown">00 días 00:00:00</div>
+      </div>
+    </section>
+
+    <!-- 📍 4. Dirección y mapa decorado -->
+    <section class="ubicacion">
+      <h2>¿Dónde?</h2>
+      <div class="mapa-decorado">
+        <!-- 🔻 Inserta aquí tu iframe de Google Maps -->
+        <div class="mapa-placeholder"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.0192411598705!2d-58.38463507514658!3d-34.60367495749435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4aa9f0a6da5edb%3A0x11bead4e234e558b!2sObelisco!5e0!3m2!1ses!2sar!4v1753141499729!5m2!1ses!2sar" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+      </div>
+      <a href="https://maps.app.goo.gl/t7uz8WuDhH1nKBMB8" target="_blank" class="boton">
+        <i class="fa-solid fa-map-location-dot"></i> Ver en Google Maps
+      </a>
+    </section>
+
+    <!-- ✅ 5. Confirmación por WhatsApp -->
+    <section class="confirmacion">
+      <h2>Confirmá tu asistencia</h2>
+      <a href="https://wa.me/5491234567890?text=¡Hola! Confirmo mi asistencia al cumple de Florencia 🎉" target="_blank" class="boton">
+        <i class="fa-brands fa-whatsapp"></i> Confirmar por WhatsApp
+      </a>
+    </section>
+
+    <!-- ✏️ 6. Texto editable -->
+    <section class="texto-libre">
+      <p>Queridos amigos y familia:
+
+Gracias de corazón por acompañarme en este día tan especial. Su presencia y cariño hicieron que este cumpleaños sea inolvidable.
+
+Sé que a veces los tiempos o las vueltas de la vida impiden pensar o comprar un regalo. Por eso, si alguien desea tener un gesto y le resulta más práctico, también pueden hacerlo mediante una transferencia.
+
+Lo importante es haber compartido este momento juntos, y eso ya es un regalo enorme para mí</p>
+    </section>
+
+    <!-- 💸 7. Botón de transferencia al CBU -->
+    <section class="cbu">
+      <h2>¿Querés hacer un regalo?</h2>
+      <a href="link.mercadopago.com.ar/pilus27" target="_blank" class="boton">
+        <i class="fa-solid fa-gift"></i> Transferencia al CBU
+      </a>
+    </section>
+
+    <!-- 👗 8. Dress Code con carrusel de imágenes -->
+    <section class="dresscode-section">
+      <h2>Dress Code</h2>
+      <p>Te dejamos algunos ejemplos para inspirarte:</p>
+
+      <div class="carousel-container">
+        <button class="carousel-btn prev">&#10094;</button>
+        <div class="carousel">
+          <img src="img/dress 1.jpg" alt="Look 1" />
+          <img src="img/dress 2.png" alt="Look 2" />
+          <img src="img/dress 3.png" alt="Look 3" />
+        </div>
+        <button class="carousel-btn next">&#10095;</button>
+      </div>
+    </section>
+
+    <!-- 🎶🍽️ 9. Sugerencias de música y comida -->
+    <section class="sugerencias">
+      <div class="col">
+        <h3>Sugerí una canción</h3>
+        <a href="https://open.spotify.com/playlist/2LtiQE7JKP8gfPCPoaymD0?si=r0LjcT_MRMKXji-D-9_5Dw&pi=sneYHBNyQXGuD" target="_blank" class="boton">
+          <i class="fa-solid fa-music"></i> Agregar canción
+        </a>
+      </div>
+      <div class="col">
+        <h3>Restriccion alimenticia</h3>
+        <a href="https://forms.gle/LQ3wK1f2yCWpxeAf9" class="boton">
+          <i class="fa-solid fa-utensils"></i> Agregar comida
+        </a>
+      </div>
+    </section>
+
+    <!-- 👋 10. Portada final de despedida -->
+    <section class="despedida">
+      <h2>¡Los espero!</h2>
+    </section>
+  </div>
+
+  <!-- 📜 Scripts -->
+  <script src="script.js"></script>
+<footer class="footer">
+  <p>Mis redes</p>
+  <div class="social-icons">
+    <a href="https://www.instagram.com/jxvier.gnz" target="_blank" aria-label="Instagram">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://open.spotify.com/playlist/2LtiQE7JKP8gfPCPoaymD0?si=r0LjcT_MRMKXji-D-9_5Dw&pi=sneYHBNyQXGuD" target="_blank" aria-label="Spotify">
+      <i class="fab fa-spotify"></i>
+    </a>
+    <a href="https://github.com/MarckGnz" target="_blank" aria-label="GitHub">
+      <i class="fab fa-github"></i>
+    </a>
+  </div>
+  <p class="copyright">
+    Hecho por Marcos Genez - 2025
+  </p>
+</footer>
+
+
+
+</body>
+</html>
