@@ -1,10 +1,48 @@
-// Obtiene el valor del parámetro "tema" en la URL
-const urlParams = new URLSearchParams(window.location.search);
-const tema = urlParams.get("tema") || "plantilla1"; // Por defecto usa plantilla1
+document.addEventListener("DOMContentLoaded", function () {
+  const clientes = {
+  marcos: {
+    nombre: "Marcos",
+    mensaje: "¡Te esperamos este sábado a las 19 hs!",
+    maps: "https://maps.app.goo.gl/ubicacionMarcos",
+    spotify: "https://open.spotify.com/track/temaMarcos",
+    css: "plantilla1.css"
+  },
+  lucia: {
+    nombre: "Lucía",
+    mensaje: "¡Será un día inolvidable, no faltes!",
+    maps: "https://maps.app.goo.gl/ubicacionLucia",
+    spotify: "https://open.spotify.com/track/temaLucia",
+    css: "plantilla2.css"
+  },
+  franco: {
+    nombre: "Franco",
+    mensaje: "Fiesta asegurada, ¡no podés faltar!",
+    maps: "https://maps.app.goo.gl/ubicacionFranco",
+    spotify: "https://open.spotify.com/track/temaFranco",
+    css: "plantilla3.css"
+  }
+};
 
-// Carga el CSS correspondiente
-const link = document.getElementById("theme-style");
-link.href = `./estilos/${tema}.css`;
+// Detectar cliente desde la URL
+const params = new URLSearchParams(window.location.search);
+const claveCliente = params.get("cliente");
+
+if (claveCliente && clientes[claveCliente]) {
+  const c = clientes[claveCliente];
+
+  // Aplicar el CSS
+  document.getElementById("theme-style").href = `./estilos/${c.css}`;
+
+  // Cambiar textos y links
+  document.getElementById("titulo").textContent = `${c.nombre}`;
+  document.getElementById("mensaje").textContent = c.mensaje;
+  document.getElementById("link-maps").href = c.maps;
+  document.getElementById("link-spotify").href = c.spotify;
+} else {
+  document.getElementById("titulo").textContent = "Invitación";
+  document.getElementById("mensaje").textContent = "Este evento será espectacular.";
+}
+
 
 /* ----------------------------------------
 ⏳ CUENTA REGRESIVA AL EVENTO
@@ -103,4 +141,4 @@ document.getElementById("btn-entrar").addEventListener("click", () => {
   musica.play();
 });
 
-
+});
